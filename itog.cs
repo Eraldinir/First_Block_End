@@ -1,18 +1,25 @@
 using static System.Console;
-WriteLine("Введите данные через пробел, затем нажмите Enter: ");
 
+WriteLine("Введите данные через пробел, затем нажмите Enter: ");
 string? input = ReadLine();
 string[] all = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-foreach (var item in all)
+Write("[");
+foreach (string part in all)
 {
-    Write(item);
+    Write('"');
+    Write(part);
+    Write('"');
+    Write(", ");
 }
-
-foreach (var item in all)
+Write("] ---> [");
+foreach (string part in all)
 {
-    if (item.Length <= 3)
+    if (part.Length <= 3)
         {
-            Write(item);
+            Write('"');
+            Write(part);
+            Write('"');
+            Write(", ");
         }
 }
+Write(']');
