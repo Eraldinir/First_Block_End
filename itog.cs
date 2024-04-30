@@ -11,7 +11,7 @@ foreach (string part in all)
     Write('"');
     Write(", ");
 }
-Write("] ---> [");
+Write("] → [");
 foreach (string part in all)
 {
     if (part.Length <= 3)
